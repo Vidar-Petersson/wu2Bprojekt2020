@@ -10,6 +10,8 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
 html {
@@ -33,82 +35,93 @@ h1 {
     grid-template-rows: 100vh 50vh auto 10vh;
 }
 
-.NavbarSection {
-    height: 70px;
+header {
+    height: 10vh;
+    width: 100%;
     display: flex;
-    max-width: 1250px;
-    margin: 0 auto;
-    padding: 0 0.7rem;
-    justify-content: space-between;
-    align-items: center;
+    
+    background-color: black;
+    position: fixed;
 }
-
-    .NavbarSection .toggler {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 2;
-        cursor: pointer;
-        width: 70px;
-        height: 70px;
-        opacity: 0;
-        margin: 0;
-    }
-
-    .NavbarSection .hamburger {
-        position: absolute;
-        box-sizing: border-box;
-        top: 0;
-        right: 0;
-        z-index: 1;
-        width: 70px;
-        height: 70px;
-        padding: 0.7rem;
+    .inner-header {
+        width: 1250px;
+        height: 100%;
         display: flex;
+        justify-content: space-between;
         align-items: center;
+        margin: 0 auto;
+        padding: 0.7rem 0.7rem;
     }
-        .NavbarSection .hamburger > div {
-            position: relative;
-            width: 100%;
-            height: 4px;
-            background-color: #ffffff;
-            transition: all 0.4s ease;
+    
+        header .toggler {
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            cursor: pointer;
+            width: 10vh;
+            height: 100%;
+            opacity: 0;
+            margin: 0;
         }
-            .NavbarSection .hamburger > div:before,
-            .NavbarSection .hamburger > div:after {
-                content: "";
-                position: absolute;
-                z-index: 1;
-                top: -14px;
+
+        header .hamburger {
+            z-index: 1;
+            width: 48px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            /* padding: 0.5rem; */
+        }
+            header .hamburger > div {
+                position: relative;
                 width: 100%;
                 height: 4px;
-                background: inherit;
+                background-color: #ffffff;
+                transition: all 0.4s ease;
             }
-            .NavbarSection .hamburger > div:after {
-                top: 14px;
+                header .hamburger > div:before,
+                header .hamburger > div:after {
+                    content: "";
+                    position: absolute;
+                    z-index: 1;
+                    top: -14px;
+                    width: 100%;
+                    height: 4px;
+                    background: inherit;
+                }
+                header .hamburger > div:after {
+                    top: 14px;
+                }
+            header .toggler:checked + .hamburger > div {
+                transform: rotate(135deg);
             }
-        .NavbarSection .toggler:checked + .hamburger > div {
-            transform: rotate(135deg);
+                header .toggler:checked + .hamburger > div:before,
+                header .toggler:checked + .hamburger > div:after {
+                    top: 0;
+                    transform: rotate(90deg);
+                }
+            
+            header .toggler:checked ~ .sidenav {
+                width: 61vw;
+            }
+            header .pagenav {
+                visibility: hidden;
+            }
+
+        header a {
+            height: 100%;
+            display: flex;
+            align-items: center;
         }
-            .NavbarSection .toggler:checked + .hamburger > div:before,
-            .NavbarSection .toggler:checked + .hamburger > div:after {
-                top: 0;
-                transform: rotate(90deg);
+            header a img {
+                max-width: 100%;
+                max-height: 100%;
             }
         
-        header .toggler:checked ~ .sidenav {
-            width: 61vw;
+        header .pagenav {
+            position: absolute;
         }
-        .NavbarSection .pagenav {
-            visibility: hidden;
-        }
-
-    .NavbarSection a {
-        height: 75%;
-        display: flex;
-        align-items: center;
-    }
-        .NavbarSection a img {
-            max-width: 100%;
-            max-height: 100%;
+        header .sidenav {
+            position: absolute;
         }
