@@ -7,7 +7,8 @@
     <link rel="shortcut icon" href="img/Old.jpg" type="image/x-icon">
     <title>NTI Johanneberg Programmeringsklubb</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
         new Crate({
           server: '415871324045705216',
@@ -22,29 +23,67 @@
             <div class="inner-header">
                 <a href="index.html"><img class="logo" src="img/NTI_Johannebergs_Programmeringsklubb_vit.png" alt="Logo" /></a>
     
-                <input type="checkbox" class="toggler" >
+                <input type="checkbox" class="toggler">
                 <div class="hamburger"><div></div></div>
         
-                <nav class="sidenav">
+                <nav class="menu">
                     <ul>
-                        <li><a href="challenges.html">Challenges</a></li>
-                        <li><a href="meetings.html">Möten</a></li>
-                        <li><a href="projects.html">Projekt</a></li>
-                        <li><a href="about.html">Om oss</a></li>
-                    </ul>
-                </nav>
-                <nav class="pagenav">
-                    <ul>
-                        <li><a href="challenges.html">Challenges</a></li>
-                        <li><a href="meetings.html">Möten</a></li>
-                        <li><a href="projects.html">Projekt</a></li>
-                        <li><a href="about.html">Om oss</a></li>
+                        <li><a href="challenges.html"><h1>CHALLENGES</h1></a></li>
+                        <li><a href="meetings.html"><h1>MÖTEN</h1></a></li>
+                        <li><a href="projects.html"><h1>PROJEKT</h1></a></li>
+                        <li><a href="about.html"><h1>OM OSS</h1></a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <h1>Website</h1>
-        <p>We Love Code</p>
+
+        <main>
+            <div class="main-bg">
+                <video autoplay muted loop class="video-bg">
+                    <source src="img/vid/mainbackgroundvideo.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="title">
+                <h1><span class="blue">WE</span> LOVE CODE</h1>
+                <h1>WE <span class="pink">LOVE</span> CODE</h1>
+                <h1>WE LOVE <span class="orange">CODE</span></h1>
+                <a href="#sectionlink" class="button"><h2>ÄLSKAR DU OCKSÅ KOD?</h2></a>
+                <a href="#sectionlink"><i class="material-icons arrow">arrow_back_ios</i></a>
+                
+            </div>
+        </main>
+
+        <article class="info">
+            <h2>WE <span class="blue">L</span><span class="pink">O</span><span class="orange">V</span>E CODE...</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te   mpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+        <section class="news">
+            <h1>SENASTE NYTT</h1>
+            <article class="article1">
+                <img src="img/CodeWeek.jpg" alt="EU CodeWeek">
+                <h2>EU CodeWeek</h2>
+                <p>Klubben var under 17:e och 18:e Oktober på Viktoriaskolans högstadium och lärde ut programmering.</p>
+            </article>
+            <article class="article1">
+                <img src="img/AdventOfCode.jpg" alt="Advent of Code">
+                <h2>Advent of Code</h2>
+                <p>Bjuder på en rolig aktivitetskalender med olika kodutmaningar varje dag fram till jul. Vem vinner i år?? :) <a href="https://adventofcode.com/"> - Klicka för mer info</a></p>
+            </article>
+        </section>
+        
+        <footer>
+            <div class="inner-footer">
+                <h2>©Vidar Petersson 2019</h2>
+                <div class="divider"><div></div></div>
+                <div class="contacts">
+                    <a href="https://github.com/ITGGoteborg" target="_blank"><img src="img/GitHub-Icon.png" alt="GitHub"></a>
+                    <a href="https://www.facebook.com/NTIProgrammering/" target="_blank"><img src="img/FB-Icon.png" alt="Facebook"></a>
+                </div>
+                
+            </div>
+        </footer>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
