@@ -150,13 +150,6 @@ header {
                     top: 0;
                     transform: rotate(90deg);
                 }
-            
-            header .toggler:checked ~ .sidenav {
-                width: 61vw;
-            }
-            header .pagenav {
-                visibility: hidden;
-            }
 
         header a {
             height: 75%;
