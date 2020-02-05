@@ -1,3 +1,4 @@
+//Meny-funktion för att öppna nav på mobil
 function menu() {
     let menu = document.querySelector(".menu");
     menu.classList.toggle("show");
@@ -37,7 +38,6 @@ class TypeWriter {
         let typeSpeed = 200;
 
         if (this.isDeleting) {
-
             typeSpeed /= 2;
         }
 
