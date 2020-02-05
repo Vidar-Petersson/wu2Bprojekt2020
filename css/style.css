@@ -41,6 +41,7 @@ html {
     font-family: "Soleto", 'Titillium Web', sans-serif;
     font-weight: normal;
     background-color: var(--background-color);
+    scroll-padding-top: 10vh;
 }
 
 h1 {
@@ -57,6 +58,9 @@ h2 {
 }
 p {
    font-size: 0.9rem;
+}
+a:hover {
+    opacity: 0.8;
 }
 .blue {
     color: #3E7EE1;
@@ -79,19 +83,17 @@ p {
     "sc"
     "fo";
     height: auto;
-    grid-template-rows: 100vh 50vh auto 10vh;
+    grid-template-rows: 100vh auto auto 10vh;
 }
 
 header {
     height: 10vh;
     width: 100%;
-    display: flex;
-    
     background-color: black;
     position: fixed;
 }
     .inner-header {
-        width: 1250px;
+        max-width: 1250px;
         height: 100%;
         display: flex;
         justify-content: space-between;
@@ -100,7 +102,6 @@ header {
         padding: 0 0.7rem;
         position: relative;
     }
-    
         header .toggler {
             position: absolute;
             top: 0;
@@ -112,7 +113,6 @@ header {
             opacity: 0;
             margin: 0;
         }
-
         header .hamburger {
             z-index: 1;
             width: 10vh;
@@ -150,7 +150,6 @@ header {
                     top: 0;
                     transform: rotate(90deg);
                 }
-
         header a {
             height: 75%;
             max-width: 70%;
@@ -161,7 +160,6 @@ header {
                 max-width: 100%;
                 max-height: 100%;
             }
-        
         header .menu {
             position: fixed;
             top: 0;
@@ -185,6 +183,9 @@ header {
         }
         header .menu ul li {
             padding: 1rem;
+        }
+        @media screen and (min-width: 760px) {
+            
         }
 
 
@@ -235,8 +236,8 @@ main {
             border-radius: 5px;
             margin-top: 4rem;
         }
-        main .title .button:hover {
-            opacity: 0.8;
+        main .title .button h2 {
+            text-decoration: none;
         }
         main .arrow {
             position: absolute;
@@ -248,7 +249,7 @@ main {
 .info {
     grid-area: info;
     padding: 20px;
-    max-width: 980px;
+    max-width: 760px;
     margin: 0 auto;
     color: #ffffff;
 }
@@ -260,12 +261,15 @@ main {
     margin-top: 10px;
 }
 
-.news {
+.news-outer {
     grid-area: sc;
-    max-width: 980px;
+    
+    background-color: #F0F0F0;
+}
+.news {
+    max-width: 760px;
     height: auto;
     margin: 0 auto;
-    background-color: #F0F0F0;
 }
 .news h1 {
     margin-top: 20px;
@@ -308,18 +312,21 @@ footer {
 }
 
 footer .inner-footer {
-    /* max-width: 1250px; */
+    max-width: 1250px;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin: 0 auto;
     padding: 0 0.7rem;
 }
 footer .inner-footer h2 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-decoration: none;
     color: #ffffff;
+}
+footer .inner-footer a h2 {
+    text-decoration: underline;
 }
 .inner-footer .contacts {
     height: 100%;
