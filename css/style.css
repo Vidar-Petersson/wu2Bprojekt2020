@@ -34,6 +34,7 @@
     list-style: none;
     text-decoration: none;
     color: #ffffff;
+    
 }
 
 html {
@@ -42,6 +43,7 @@ html {
     font-weight: normal;
     background-color: var(--background-color);
     scroll-padding-top: 10vh;
+    line-height: 1.4;
 }
 
 h1 {
@@ -62,7 +64,8 @@ h2 {
     }
 }
 p {
-   font-size: 0.9rem;
+   font-size: 1rem;
+   
 }
 a:hover {
     opacity: 0.8;
@@ -226,7 +229,7 @@ main {
     overflow: hidden;
 }
     main .main-bg {
-        opacity: 35%;
+        opacity: 30%;
         position: absolute;
         top: 0;
         right: 0;
@@ -272,19 +275,25 @@ main {
         main .arrow {
             position: absolute;
             bottom: 15px;
-            transform: rotate(270deg) scale(1.5);
+            transform: rotate(270deg) scale(1.7);
             z-index: -1;
+            align-self: center;
         }
 @media only screen and (min-width: 768px) {
+    main .title {
+        max-width: 1250px;
+        margin: 0 auto;
+        align-items: flex-start;
+    }
     main .title h1 {
-        font-size: 6rem;
-        line-height: 4.5rem;
+        font-size: 5rem;
+        line-height: 3.8rem;
     }
 }
 
 .info {
     grid-area: info;
-    padding: 20px;
+    padding: 60px 20px;
     max-width: 760px;
     margin: 0 auto;
     color: #ffffff;
@@ -292,6 +301,7 @@ main {
 .info h2 {
     text-decoration: underline;
     color: #ffffff;
+    font-size: 1.8rem;
 }
 .info p {
     margin-top: 10px;
@@ -351,7 +361,7 @@ footer .inner-footer {
     max-width: 1250px;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
     padding: 0 0.7rem;
@@ -383,28 +393,28 @@ footer .inner-footer a h2 {
     }
 
     .inner-footer .divider {
-        width: 4px;
-        height: 90%;
+        width: 5px;
+        height: 80%;
         display: flex;
-        align-items: center;
-        /* padding: 0.5rem; */
+        justify-content: center;
+        align-items: space-around;
     }
         .inner-footer .divider > div {
             position: relative;
-            width: 4px;
-            height: 25%;
-            background-color: #3E7EE1;
+            width: 100%;
+            background-color: #EB0077;
         }
-            .inner-footer .divider > div:before,
-            .inner-footer .divider > div:after {
-                content: "";
-                position: absolute;
-                top: 13px;
-                width: 4px;
-                height: 100%;
-                background: #EB0077;
-            }
-            .inner-footer .divider > div:after {
-                top: -10px;
-                background-color: #F09700;
-            }
+        .inner-footer .divider > div:after {
+            background-color: #F09700;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 33%;
+        }
+        .inner-footer .divider > div:before {
+            background-color: #3E7EE1;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 33%;
+        }
