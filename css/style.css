@@ -188,7 +188,7 @@ header .header-bg {
             transition: opacity 0.4s ease;
         }
         header .menu ul li {
-            padding: 1rem;
+            padding: 1.2rem 1rem;
         }
     }
 
@@ -293,7 +293,7 @@ main {
 
 .info {
     grid-area: info;
-    padding: 60px 20px;
+    padding: 50px 20px;
     max-width: 760px;
     margin: 0 auto;
     color: #ffffff;
@@ -309,43 +309,48 @@ main {
 
 .news-outer {
     grid-area: sc;
-    
     background-color: #F0F0F0;
 }
 .news {
-    max-width: 760px;
+    max-width: 1100px;
     height: auto;
+    margin: 0 auto 50px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.news-outer h1 {
+    padding: 20px 0 0 20px;
+    max-width: 760px;
     margin: 0 auto;
-}
-.news h1 {
-    margin-top: 20px;
-    margin-left: 20px;
     color: black;
-    font-size: 1.6rem;
+    font-size: 2rem;
 }
-.news .article1 {
+.news .card {
     margin: 20px;
     height: auto;
     background-color: #ffffff;
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-bottom: 20px;
+    max-width: 500px;
 }
-.news .article1 img {
+.news .card img {
     width: 100%;
-    height: 170px;
+    height: 190px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
-.news .article1 a {
+.news .card a {
     color: blue;
     text-decoration: underline;
 }
-.news .article1 h2 {
+.news .card h2 {
     margin: 0 10px;
     text-decoration: underline;
 }
-.news .article1 p {
+.news .card p {
     color: black;
     margin: 0 10px;
     margin-top: 5px;
