@@ -56,6 +56,11 @@ h2 {
     color: black;
     text-decoration: underline;
 }
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 20px;
+    }
+}
 p {
    font-size: 0.9rem;
 }
@@ -89,8 +94,14 @@ a:hover {
 header {
     height: 10vh;
     width: 100%;
-    background-color: black;
     position: fixed;
+}
+header .header-bg {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    position: absolute;
 }
     .inner-header {
         max-width: 1250px;
@@ -102,6 +113,8 @@ header {
         padding: 0 0.7rem;
         position: relative;
     }
+    
+    @media screen and (max-width: 768px) {
         header .toggler {
             position: absolute;
             top: 0;
@@ -121,45 +134,35 @@ header {
             align-items: center;
             /* padding: 0.5rem; */
         }
-            header .hamburger > div {
-                position: relative;
-                width: 100%;
-                height: 4px;
-                background-color: #ffffff;
-                transition: all 0.4s ease;
-            }
-                header .hamburger > div:before,
-                header .hamburger > div:after {
-                    content: "";
-                    position: absolute;
-                    z-index: 1;
-                    /* top: -14px; */
-                    top: -2vh;
-                    width: 100%;
-                    height: 4px;
-                    background: inherit;
-                }
-                header .hamburger > div:after {
-                    top: 2vh;
-                }
-            header .toggler:checked + .hamburger > div {
-                transform: rotate(135deg);
-            }
-                header .toggler:checked + .hamburger > div:before,
-                header .toggler:checked + .hamburger > div:after {
-                    top: 0;
-                    transform: rotate(90deg);
-                }
-        header a {
-            height: 75%;
-            max-width: 70%;
-            display: flex;
-            align-items: center;
+        header .hamburger > div {
+            position: relative;
+            width: 100%;
+            height: 4px;
+            background-color: #ffffff;
+            transition: all 0.4s ease;
         }
-            header a img {
-                max-width: 100%;
-                max-height: 100%;
-            }
+        header .hamburger > div:before,
+        header .hamburger > div:after {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            /* top: -14px; */
+            top: -2vh;
+            width: 100%;
+            height: 4px;
+            background: inherit;
+        }
+        header .hamburger > div:after {
+            top: 2vh;
+        }
+        header .toggler:checked + .hamburger > div {
+            transform: rotate(135deg);
+        }
+        header .toggler:checked + .hamburger > div:before,
+        header .toggler:checked + .hamburger > div:after {
+            top: 0;
+            transform: rotate(90deg);
+        }
         header .menu {
             position: fixed;
             top: 0;
@@ -184,9 +187,36 @@ header {
         header .menu ul li {
             padding: 1rem;
         }
-        @media screen and (min-width: 760px) {
-            
+    }
+
+    header .logoA {
+        height: 75%;
+        max-width: 70%;
+        display: flex;
+        align-items: center;
+    }
+        header a img {
+            max-width: 100%;
+            max-height: 100%;
         }
+
+    @media only screen and (min-width: 768px) {
+        header .toggler, .hamburger {
+            visibility: hidden;
+        }
+        header .menu li {
+            padding: 0 25px;
+            display: inline-block;
+        }
+        header .menu li a {
+            display: block;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+    }
 
 
 main {
@@ -196,7 +226,7 @@ main {
     overflow: hidden;
 }
     main .main-bg {
-        opacity: 25%;
+        opacity: 35%;
         position: absolute;
         top: 0;
         right: 0;
@@ -245,6 +275,12 @@ main {
             transform: rotate(270deg) scale(1.5);
             z-index: -1;
         }
+@media only screen and (min-width: 768px) {
+    main .title h1 {
+        font-size: 6rem;
+        line-height: 4.5rem;
+    }
+}
 
 .info {
     grid-area: info;

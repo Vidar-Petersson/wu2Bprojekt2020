@@ -5,6 +5,13 @@ function menu() {
 }
 document.querySelector(".toggler").addEventListener("click", menu)
 
+// Kontrollerar opacity på headern beroende på scroll
+$(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        $('.header-bg').css("opacity", 0 + $(window).scrollTop() / 300) 
+    }) 
+}) 
+
 //ES6 Class
 class TypeWriter {
     constructor(txtElement, words, wait = 2500) {
