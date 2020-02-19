@@ -294,7 +294,7 @@ main .arrow {
 .info {
     grid-area: info;
     padding: 50px 20px;
-    max-width: 760px;
+    max-width: 980px;
     margin: 0 auto;
     color: #ffffff;
 }
@@ -327,7 +327,7 @@ main .arrow {
     background-color: #F0F0F0;
 }
 .news {
-    max-width: 1100px;
+    max-width: 980px;
     height: auto;
     margin: 0 auto 50px;
     display: flex;
@@ -337,10 +337,13 @@ main .arrow {
 }
 .news-outer h1 {
     padding: 20px 0 0 20px;
-    max-width: 760px;
+    max-width: 980px;
     margin: 0 auto;
     color: black;
     font-size: 2rem;
+}
+.news-outer i {
+    color: black;
 }
 .news .card {
     margin: 20px;
@@ -349,7 +352,7 @@ main .arrow {
     border-radius: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding-bottom: 20px;
-    max-width: 500px;
+    max-width: 450px;
 }
 .news .card img {
     width: 100%;
