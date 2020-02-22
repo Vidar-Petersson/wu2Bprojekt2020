@@ -34,7 +34,6 @@
     list-style: none;
     text-decoration: none;
     color: #ffffff;
-    
 }
 
 html {
@@ -238,15 +237,18 @@ main .main-bg {
     z-index: -1;
     overflow: hidden;
 }
-main .video-bg {
+main .home-bg, .challenges-bg, .meetings-bg, .projects-bg {
     position: absolute;
     top: 50%;
     left: 50%;
     width: auto;
-    height: auto;
+    height: 100%;
     min-width: 100%;
     min-height: 100%;
     transform: translate(-50%, -50%);
+}
+main .challenges-bg {
+    transform: translate(-60%, -50%);
 }
 
 main .title {
@@ -258,6 +260,9 @@ main .title {
     justify-content: center;
     text-align: center;
     height: 100%;
+}
+main .title h1 {
+    /* word-break: break-all; */
 }
 main .title .button {
     background-color: var(--secondary-color);
@@ -272,6 +277,15 @@ main .title .button {
 main .title .button h2 {
     text-decoration: none;
 }
+main .title .main-description {
+    text-decoration: none;
+    color: white;
+    margin-top: 2rem;
+    /* padding: 0 0.7rem; */
+    line-height: 1.5rem;
+    text-align: center;
+    font-size: 1.3rem;
+}
 main .arrow {
     position: absolute;
     bottom: 15px;
@@ -280,6 +294,15 @@ main .arrow {
     align-self: center;
 }
 @media only screen and (min-width: 768px) {
+    main .home-bg {
+        height: auto;
+    }
+    main .title {
+        text-align: left;
+    }
+    main .challenges-bg {
+        transform: translate(-50%, -50%);
+    }
     main .title {
         max-width: 1250px;
         margin: 0 auto;
@@ -288,6 +311,12 @@ main .arrow {
     main .title h1 {
         font-size: 5rem;
         line-height: 3.8rem;
+    }
+    main .title .main-description {
+        font-size: 1.7rem;
+        margin-top: 4rem;
+        text-align: left;
+        line-height: 1.8rem;
     }
 }
 
