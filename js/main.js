@@ -16,7 +16,6 @@ $(document).ready(function(){
 var countDownDate = new Date();
 countDownDate.setDate(countDownDate.getDate() + (3 + 7 - countDownDate.getDay()) % 7);
 countDownDate.setHours(15, 00, 00);
-console.log(countDownDate);
 // Update the count down every 1 second
 var x = setInterval(function() {
   // Get today's date and time

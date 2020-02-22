@@ -250,6 +250,12 @@ main .home-bg, .challenges-bg, .meetings-bg, .projects-bg {
 main .challenges-bg {
     transform: translate(-60%, -50%);
 }
+main .home-bg {
+    filter: contrast(70%);
+}
+main .projects-bg {
+    transform: translate(-65%, -50%);
+}
 
 main .title {
     margin: 0 auto;
@@ -296,6 +302,9 @@ main .arrow {
     }
     main .title {
         text-align: left;
+    }
+    main .projects-bg {
+        transform: translate(-50%, -50%);
     }
     main .challenges-bg {
         transform: translate(-50%, -50%);
@@ -405,6 +414,10 @@ main .arrow {
     height: 70vh;
     margin: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
+.card-deck .github-card {
+    margin: 20px;
     border-radius: 5px;
 }
 footer {
