@@ -261,9 +261,6 @@ main .title {
     text-align: center;
     height: 100%;
 }
-main .title h1 {
-    /* word-break: break-all; */
-}
 main .title .button {
     background-color: var(--secondary-color);
     border: none;
@@ -351,11 +348,11 @@ main .arrow {
     font-size: 1rem;
 }
 
-.news-outer {
-    grid-area: sc;
+.card-deck-outer {
+    /* grid-area: sc; */
     background-color: #F0F0F0;
 }
-.news {
+.card-deck {
     max-width: 980px;
     height: auto;
     margin: 0 auto 50px;
@@ -364,17 +361,17 @@ main .arrow {
     justify-content: center;
     flex-wrap: wrap;
 }
-.news-outer h1 {
+.card-deck-outer h1 {
     padding: 20px 0 0 20px;
     max-width: 980px;
     margin: 0 auto;
     color: black;
     font-size: 2rem;
 }
-.news-outer i {
+.card-deck-outer i {
     color: black;
 }
-.news .card {
+.card-deck .card {
     margin: 20px;
     height: auto;
     background-color: #ffffff;
@@ -383,26 +380,33 @@ main .arrow {
     padding-bottom: 20px;
     max-width: 450px;
 }
-.news .card img {
+.card-deck .card img {
     width: 100%;
     height: 190px;
     object-fit: cover;
     border-radius: 20px 20px 0 0;
 }
-.news .card a {
+.card-deck .card a {
     color: blue;
     text-decoration: underline;
 }
-.news .card h2 {
+.card-deck .card h2 {
     margin: 0 10px;
     text-decoration: underline;
 }
-.news .card p {
+.card-deck .card p {
     color: black;
     margin: 0 10px;
     margin-top: 5px;
 }
-
+.card-deck #maps {
+    border: 0;
+    width: 100%;
+    height: 70vh;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+}
 footer {
     grid-area: fo;
     display: flex;

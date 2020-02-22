@@ -13,7 +13,10 @@ $(document).ready(function(){
 }) 
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2021 15:00:00").getTime();
+var countDownDate = new Date();
+countDownDate.setDate(countDownDate.getDate() + (3 + 7 - countDownDate.getDay()) % 7);
+countDownDate.setHours(15, 00, 00);
+console.log(countDownDate);
 // Update the count down every 1 second
 var x = setInterval(function() {
   // Get today's date and time
@@ -26,13 +29,13 @@ var x = setInterval(function() {
   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
   // Output the result in an element with id="demo"
-  document.getElementById("time_to_meeting").innerHTML = days + "dagar " + hours + "timmar "
+  document.getElementById("time-to-meeting").innerHTML = days + "dagar " + hours + "timmar "
   + minutes + "m " + seconds + "s kvar";
 
   // If the count down is over, write some text 
-  if (distance < 0) {
+  if (distance <= 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("time-to-meeting").innerHTML = "Mötesdags!";
   }
 }, 1000);
 
