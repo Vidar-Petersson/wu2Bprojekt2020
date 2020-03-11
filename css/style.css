@@ -340,6 +340,7 @@ main .arrow {
 }
 .info p {
     margin-top: 10px;
+    /* text-align: justify; */
 }
 .info .button {
     background-color: var(--secondary-color);
