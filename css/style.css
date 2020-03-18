@@ -1,22 +1,22 @@
 @font-face {
-    font-family: "Soleto";
-    src: url("fonter/Soleto-XBold.ttf");
+    font-family: "SoletoX";
+    src: url("../fonter/Soleto-XBold.ttf");
     font-weight: bold;
 }
 @font-face {
     font-family: "Soleto";
-    src: url("fonter/Soleto-Medium.ttf");
-    font-weight: 600;
+    src: url("../fonter/Soleto-Medium.ttf");
+    font-weight: 700;
 }
 @font-face {
     font-family: "Soleto";
-    src: url("fonter/Soleto-Regular.ttf");
+    src: url("../fonter/Soleto-Light.ttf");
+    font-weight: lighter;
+}
+@font-face {
+    font-family: "Soleto";
+    src: url("../fonter/Soleto-Regular.ttf");
     font-weight: normal;
-}
-@font-face {
-    font-family: "Soleto";
-    src: url("fonter/Soleto-Light.ttf");
-    font-weight: 400
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Titillium+Web&display=swap');
@@ -39,32 +39,38 @@
 html {
     scroll-behavior: smooth;
     font-family: "Soleto", 'Titillium Web', sans-serif;
-    font-weight: normal;
+    /* font-weight: normal; */
     background-color: var(--background-color);
     scroll-padding-top: 10vh;
     line-height: 1.4;
-}
-
-h1 {
-    font-family: "Soleto", 'Open Sans', sans-serif;
-    font-weight: 800;
-    font-size: 2.7rem;
-    line-height: 2.1rem;
-}
-h2 {
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: black;
-    text-decoration: underline;
 }
 @media only screen and (min-width: 768px) {
     html {
         font-size: 20px;
     }
 }
+h1 {
+    font-family: "SoletoX";
+    font-weight: bold;
+    font-size: 2.7rem;
+    line-height: 2.1rem;
+}
+h2 {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: underline;
+}
+h3 {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: black;
+    text-decoration: underline;
+}
 p {
    font-size: 1rem;
-   
+   font-weight: normal;
+
 }
 a:hover {
     opacity: 0.8;
@@ -97,6 +103,7 @@ header {
     height: 10vh;
     width: 100%;
     position: fixed;
+    z-index: 1;
 }
 header .header-bg {
     width: 100%;
@@ -237,7 +244,10 @@ main .main-bg {
     z-index: -1;
     overflow: hidden;
 }
-main .home-bg, .challenges-bg, .meetings-bg, .projects-bg {
+#profile-bg {
+    position: fixed;
+}
+main .home-bg, .challenges-bg, .meetings-bg, .projects-bg, .about-bg {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -256,7 +266,6 @@ main .home-bg {
 main .projects-bg {
     transform: translate(-65%, -50%);
 }
-
 main .title {
     margin: 0 auto;
     padding: 0 20px;
@@ -288,6 +297,7 @@ main .title .main-description {
     line-height: 1.5rem;
     text-align: center;
     font-size: 1.3rem;
+    font-weight: normal;
 }
 main .arrow {
     position: absolute;
@@ -332,6 +342,7 @@ main .arrow {
     max-width: 980px;
     margin: 0 auto;
     color: #ffffff;
+    background-color: var(--background-color);
 }
 .info h2 {
     text-decoration: underline;
@@ -362,14 +373,9 @@ main .arrow {
     /* grid-area: sc; */
     background-color: #F0F0F0;
 }
-.card-deck {
-    max-width: 980px;
-    height: auto;
-    margin: 0 auto 50px;
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+#profile {
+    background-color: unset;
+    color: white;
 }
 .card-deck-outer h1 {
     padding: 20px 0 0 20px;
@@ -380,6 +386,15 @@ main .arrow {
 }
 .card-deck-outer i {
     color: black;
+}
+.card-deck {
+    max-width: 980px;
+    height: auto;
+    margin: 0 auto 50px;
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 .card-deck .card {
     margin: 20px;
@@ -408,9 +423,9 @@ main .arrow {
     color: black;
     margin: 0 10px;
     margin-top: 5px;
+    font-weight: lighter;
 }
 .card-deck .profile {
-    align-items: space-between;
     margin: 20px;
     height: auto;
     padding-bottom: 20px;
@@ -419,20 +434,20 @@ main .arrow {
 .card-deck .profile img {
     width: 100%;
     object-fit: cover;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .card-deck .profile a {
     color: blue;
     text-decoration: underline;
 }
 .card-deck .profile h2 {
-    margin: 0 10px;
     text-decoration: none;
+    color: white;
 }
 .card-deck .profile p {
-    color: black;
-    margin: 0 10px;
-    margin-top: 5px;
+    color: white;
+    font-weight: lighter;
+    /* background-color: #3E7EE1; */
 }
 .card-deck #maps {
     border: 0;
@@ -453,6 +468,7 @@ footer {
     grid-area: fo;
     display: flex;
     width: 100%;
+    background-color: var(--background-color);
 }
 
 footer .inner-footer {
