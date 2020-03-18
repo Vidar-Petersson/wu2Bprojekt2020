@@ -20,6 +20,9 @@
             max-width: 400px;
             max-height: 400px;
         }
+        h1, h2, h3 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
     </style>
 
 </head>
@@ -193,9 +196,17 @@
     <img src="img/ContrastChecker2.png" alt="ContrastChecker">
     <p>Jag har även uppdaterat coden, rensat lite bland gammla bilder och kod som inte längre behövdes. Jag började även jobba på "om oss"-sidan. Jag la in placeholders för profilbilderna och gjorde även om designen lite grann för presentationen av styrelsen. Jag tyckte att det skulle bli lite för upprepat att använda card-formatet på alla sidor på hemsidan. </p>
 
-
     <h3>Lektion vecka 12</h3>
+    <p>Idag började jag med att validera min kod och kollade så att designen såg likadan ut på olika webbläsare. Jag jämförde Chrome (som jag jobbat i) mot Firefox. Som man kan se på bilderna nedan laddade båda hemsidorna och allt material verkade vara på rätt plats. Det enda som skiljde sig var att fonten var olika. Jag använde mig av inspekteraren och kollade i min css-fil. Eftersom jag har valt ett speciellt typsnitt var jag tvungen att ladda ner och importera det i css-filen. Det jag hade glömt var att lägga till "../" innan för att ta sig ur css-mappen innan den kunde öppna mappen där fonterna låg. Varför detta problem inte uppenbarade sig på Chrome har jag ingen aning. </p>
+    <figure>
+        <img src="img/ChromeVersion.png" alt="Chrome">
+        <img src="img/FirefoxVersion.png" alt="Firefox">
+        <figcaption>Vänster: Chrome. Höger: Firefox.</figcaption>
+    </figure>
+    <p>Efter att ha pillat lite med fonterna upptäckte jag att det var lite små problem som uppstod i och med att jag inte hade länkat till fonterna på rätt sätt. Löste det genom att mixtra lite med inställningarna för font-size och font-weight. <br>Jag fortsatte sedan med min about/profile-page. Jag gjorde färdigt designen och anpassade den sidan. Jag fortatte även med min projekt-sida där jag försöker efterlikna hur våra github projekt på Github. Jag kopierade designen men när jag var färdig insåg jag att det inte gick att mobilanpassa. Jag får fortsätta med det utanför lektionstid.</p>
+    <img src="img/github-card2.png" alt="Github-card2">
 
+    <h3>Lektion vecka 13</h3>
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
