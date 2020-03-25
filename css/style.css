@@ -457,11 +457,39 @@ main .arrow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 5px;
 }
-.card-deck .github-card {
+.project-table {
+    border-collapse: collapse;
+    width: 100%;
     margin: 20px;
     border-radius: 5px;
-    max-width: 450px;
-    width: 320px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.project-table thead tr {
+    background-color: var(--background-color);
+    color: white;
+    text-align: left;
+}
+.project-table td, th {
+    padding: 12px 15px;
+}
+.project-table td, td p {
+    color: black;
+}
+.project-table td a{
+    color: #0366d6;
+    font-weight: bold;
+    font-size: 1.3rem;
+    word-break: break-all;
+}
+.project-table tbody tr {
+    border-bottom: 1px solid var(--background-color);
+}
+.project-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+.project-table tbody tr:last-of-type {
+    border-bottom: 2px solid var(--background-color);
 }
 
 footer {
