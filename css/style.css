@@ -39,7 +39,6 @@
 html {
     scroll-behavior: smooth;
     font-family: "Soleto", 'Titillium Web', sans-serif;
-    /* font-weight: normal; */
     background-color: var(--background-color);
     scroll-padding-top: 10vh;
     line-height: 1.4;
@@ -113,14 +112,14 @@ header .header-bg {
     position: absolute;
 }
 .inner-header {
-max-width: 1250px;
-height: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin: 0 auto;
-padding: 0 0.7rem;
-position: relative;
+    max-width: 1250px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 0.7rem;
+    position: relative;
 }
 
 @media screen and (max-width: 768px) {
@@ -141,7 +140,6 @@ header .hamburger {
     height: 100%;
     display: flex;
     align-items: center;
-    /* padding: 0.5rem; */
 }
 header .hamburger > div {
     position: relative;
@@ -155,7 +153,6 @@ header .hamburger > div:after {
     content: "";
     position: absolute;
     z-index: 1;
-    /* top: -14px; */
     top: -2vh;
     width: 100%;
     height: 4px;
@@ -208,6 +205,12 @@ header a img {
     max-width: 100%;
     max-height: 100%;
 }
+header .menu li a {
+    font-family: "SoletoX";
+    font-weight: bold;
+    font-size: 2.7rem;
+    line-height: 2.1rem;
+}
 
 @media only screen and (min-width: 768px) {
     header .toggler, .hamburger {
@@ -221,7 +224,7 @@ header a img {
         display: block;
         text-align: center;
     }
-    header h1 {
+    header .menu li a {
         font-size: 1.2rem;
         font-weight: 600;
     }
@@ -293,7 +296,6 @@ main .title .main-description {
     text-decoration: none;
     color: white;
     margin-top: 2rem;
-    /* padding: 0 0.7rem; */
     line-height: 1.5rem;
     text-align: center;
     font-size: 1.3rem;
@@ -351,7 +353,6 @@ main .arrow {
 }
 .info p {
     margin-top: 10px;
-    /* text-align: justify; */
 }
 .info .button {
     background-color: var(--secondary-color);
@@ -370,7 +371,6 @@ main .arrow {
 }
 
 .card-deck-outer {
-    /* grid-area: sc; */
     background-color: #F0F0F0;
 }
 #profile {
@@ -434,7 +434,6 @@ main .arrow {
 .card-deck .profile img {
     width: 100%;
     object-fit: cover;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 .card-deck .profile a {
     color: blue;
@@ -447,7 +446,6 @@ main .arrow {
 .card-deck .profile p {
     color: white;
     font-weight: lighter;
-    /* background-color: #3E7EE1; */
 }
 .card-deck #maps {
     border: 0;
@@ -508,13 +506,11 @@ footer .inner-footer {
     margin: 0 auto;
     padding: 0 0.7rem;
 }
-footer .inner-footer h2 {
+footer .inner-footer a {
+    font-weight: 700;
     font-size: 1rem;
-    text-decoration: none;
-    color: #ffffff;
-}
-footer .inner-footer a h2 {
     text-decoration: underline;
+    color: #ffffff;
 }
 .inner-footer .contacts {
     height: 100%;
@@ -522,7 +518,6 @@ footer .inner-footer a h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* margin-left: 40px; */
 }
 .inner-footer .contacts a {
     height: 50%;
@@ -539,7 +534,6 @@ footer .inner-footer a h2 {
     height: 80%;
     display: flex;
     justify-content: center;
-    align-items: space-around;
 }
 .inner-footer .divider > div {
     position: relative;
