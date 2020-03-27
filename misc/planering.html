@@ -11,6 +11,10 @@
     <title>Dokumentation Projekt VT-2020</title>
 
     <style>
+        body {
+            max-width: 1000px;
+            margin: auto;
+        }
         table, td, th {
             border: 1px solid black
         }
@@ -31,13 +35,17 @@
     <h1>Dokumentation Projekt VT-2020</h1>
 
     <h2>1. Idébeskrivning</h2>
-    <p>Mitt webbutvecklings-projekt skall handla om skolans Programmeringsklubb. Jag sitter själv i styrelsen och vill utveckla en hemsida där vi informerar om klubben, sprider info och underlättar för eleverna som går programmeringskurserna på skolan. Primär målgrupp är eleverna på NTI Johanneberg, men även för andra programmeringsintresserade. Sidan skall följa den stilguide vi har för klubben.</p>
+    <p>Mitt webbutvecklings-projekt skall handla om skolans Programmeringsklubb. Jag sitter själv i styrelsen och vill utveckla en hemsida där vi informerar om klubben, sprider info och underlättar för eleverna som går programmeringskurserna på skolan. Primär målgrupp är eleverna på NTI Johanneberg, men även för andra programmeringsintresserade. Sidan skall följa den stilguide vi har för klubben. Vi använder färgerna #3E7EE1 #EB0077 och #F09700. Dessa är färgerna för det gamla ITG-profilen och har hängt med från äldre hemsidor och projekt. Som typsnitt använder vi Soleto vilket är NTI Gymnasiets font. Detta för att skapa samhörighet med skolan och vissa att vi är en del av det nya. </p>
     <!-- Vad ska du göra? Vilken är din målgrupp? Om du utvecklar en tidigare sida; Vad ska du förändra/utveckla? -->
 
     <h2>2. Planering</h2>
 
     <h3>2.1 Handskiss</h3>
     <!-- Här lägger du en bild på din handskiss av layouten. Viktigt att du beskriver vilka boxelement som ska användas. Visa även hur du tänker med ditt grid (Hur många kolumner?) -->
+    <img src="img/Layout-skiss.png" alt="Skiss">
+    <img src="img/Layout2.png" alt="Skiss 2">
+    <p>Min skiss gjord i Adobe XD och anteckningar gjorda i Paint.</p>
+
 
     <h3>2.2 Schema</h3>
     <!-- Vad ska du göra när? Inte för detaljerat. -->
@@ -211,13 +219,20 @@
 
     <h2>4. Testning</h2>
     <!-- Testa i Chrome + Firefox eller Safari (på både dator och mobil). Skiljer sig resultatet? Har du behövt anpassa ditt kod/innehåll efter de olika webbläsarna? Hur gick valideringen? Vad säger contrastchecker.com om text/bakgrundsfärg? Hur ser resultatet ut på en riktig telefon? -->
+    <p>När jag körde html-validatorn fick jag inga error dock några anmärkningar på att jag använt h1-taggen flera gånger på samma sida. Jag löste det genom att ändra om lite i taggarna på sidorna.</p>
+    <img src="img/HTML-validator.png" alt="HTML-check">
+    <p>När jag körde CSS-validatorn fick jag några anmärkningar (se bild). De flesta fel var parsningsfel från att jag använt css variabler. Detta skall dock inte vara något problem eftersom det fungerar och finns med i css dokumentationen. Align-items hade jag satt fel property till men det funkade fortfarande så jag tog bara bort den. </p>
+    <img src="img/CSS-validator.png" alt="CSS-check">
+    <p>Såhär ser hemsidan ut på min mobil (Samsung Galaxy S7). Allt fungerar bra på mobilen och designen stämmer överrens med den man får i datorns inspekterare.</p>
+    <img src="img/S7-test.png" alt="Mobil version">
+    <p>Jag körde lite validering under lektionstid allt eftersom. Se respektive vecka för bilder, tester och korrigeringar.</p>
 
     <h2>5. Utvärdering</h2>
     <!-- Ex: Vad gick bra/mindre bra? (i arbetet/din förmåga).
     Nyanserat: "hur hade det blivit om jag istället hade...?"
     Konkreta förbättringsförslag i produkt + process. -->
     <p>Detta projekt har verkligen varit ett nytt steg för mig. Det förra projektet vi gjorde kändes som en bra uppvärmning för att bli bekväm med design, verktyg och layout.</p>
-    <p></p>
+    <p>Jag blev överlag väldigt nöjd med mitt projekt. Jag la ner ganska mycket tid på att designa och hitta den layouten jag ville ha i Adobe XD. Jag tycker att det är mycket enklare att koda när man vet exakt vilken design man vill uppnå. Då är det bara att trycka in det man vill ha i css:en och html koden utan att behöva experimentera sig fram hur man vill ha det och vad som ser bra ut.</p>
     <p>Det största problemet jag hade, som tog mest tid, var hur jag skulle presentera klubbens projekt. Alla våra större projekt finns på vår GitHub så jag tänkte att man skulle kunna presentera de på ett liknande sätt och länka dit. Jag försökte först härma GitHubs design för att skapa anknytning till GitHub. Jag upptäckte dock att det var oerhört svårt att få det liknande och att passa in med sidans övriga design och responsivitet. Jag löste det genom att använda table taggen och göra det som en excel spreadsheet med projekten, språk och länkar.</p>
     <p>I det förra projektet fick jag responsen att försöka bryta upp upprepningen av layout och design på varje sida. I min elektrofysik hemsida hade jag samma kort system på varje sida. I detta projekt försöker jag hitta balansen mellan sammanhållande design för att inte förvirra användaren och att inte bli repetitiv. Jag använde samma landing/main på varje sida men att bryta upp innehållet.</p>
     <p>Ifall jag hade haft mer resurser och tid hade jag vidareutvecklat vissa grejer. Det första är att bygga en mer dynamisk hemsida. Ett sätt att enkelt och, i viss mån, automatiskt uppdatera innehållet. Nyhetsflödet på förstasidan borde man lätt kunna uppdatera. Jag har redan nu en template för hur nyhetskorten ska se ut. De är hyfsat responsiva. Github projekten borde uppdateras automatiskt när nya repos läggs till i organisationens sida. </p>
